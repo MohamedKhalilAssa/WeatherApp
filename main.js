@@ -25,10 +25,11 @@ SearchButton.addEventListener("click",()=>{
         if(response.cod == 404){
             WeatherICon.src="Icons/404NotFound.png";
             description.innerText = "Location not Found!";
+            temperature.style.display="none";
             details.style.display="none";
             return;
         }
-
+        temperature.style.display="inline-block";
 
         switch (response.weather[0].main){
             case 'Clear' :
